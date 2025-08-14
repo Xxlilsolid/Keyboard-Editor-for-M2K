@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Keyboard editor"
+run/main_scene="uid://bn3fhufjuep82"
+config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/resizable=false
+
+[dotnet]
+
+project/assembly_name="Keyboard editor"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_2d=1
