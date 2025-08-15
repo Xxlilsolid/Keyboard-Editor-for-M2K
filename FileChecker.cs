@@ -14,15 +14,9 @@ public partial class FileChecker : Node
 	{
 		string jsonString = File.ReadAllText(settingslocation);
 		JsonNode settingsNode = JsonNode.Parse(jsonString);
-		var csdictionary = new System.Collections.Generic.Dictionary<string, JsonNode>();
 		var dictionary = new Godot.Collections.Dictionary<string, string>();
 
 		foreach (var value in settingsNode.AsObject())
-		{
-			csdictionary.Add(value.Key, value.Value);
-		}
-
-		foreach (var value in csdictionary)
 		{
 			dictionary.Add(value.Key, value.Value.ToString());
 		}
@@ -32,15 +26,11 @@ public partial class FileChecker : Node
 	{
 		string jsonString = File.ReadAllText(keymaplocation);
 		JsonNode settingsNode = JsonNode.Parse(jsonString);
-		var csdictionary = new System.Collections.Generic.Dictionary<string, string>();
 		var dictionary = new Godot.Collections.Dictionary<string, string>();
+
 		foreach (var value in settingsNode["keymap"].AsObject())
 		{
-			csdictionary.Add(value.Key, (string)value.Value);
-		}
-		foreach (var value in csdictionary)
-		{
-			dictionary.Add(value.Key, value.Value);
+			dictionary.Add(value.Key, value.Value.ToString());
 		}
 		return dictionary;
 	}

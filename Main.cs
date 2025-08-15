@@ -41,7 +41,6 @@ public partial class Main : Node2D
 				}
 		}
 
-		var keyboardCanvasLayer = GetNode<CanvasLayer>("KeyboardButtons");
 		Godot.Collections.Dictionary keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
 		foreach (var value in keymap)
 		{

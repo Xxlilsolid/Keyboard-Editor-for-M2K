@@ -1058,5 +1058,5 @@ text = "[color=white]..."
 horizontal_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(601, 171)
-zoom = Vector2(0.915, 1.715)
+position = Vector2(611, 189)
+zoom = Vector2(0.93, 1.715)
