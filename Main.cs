@@ -2,12 +2,20 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 
 public partial class Main : Node2D
 {
 	public override void _Ready()
 	{
+		for (int i = 36; i <= 96; i++)
+		{
+			Button button = GetNode<Button>("./KeyboardButtons/Button" + i);
+			button.Pressed += () => on_button_press((string)button.Name);
+		}
+
+
 		var fileChecker = GetNode<Node>("FileChecker");
 		var background = GetNode<ColorRect>("Background");
 		Godot.Collections.Dictionary settings = (Godot.Collections.Dictionary)fileChecker.Call("ReadSettings", "./settings.json");
@@ -42,14 +50,41 @@ public partial class Main : Node2D
 		}
 
 		Godot.Collections.Dictionary keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
+		Char[] specialchars = ['!', '@', '$', '%', '^', '*', '('];
 		foreach (var value in keymap)
 		{
 			var node = GetNode<RichTextLabel>("KeyboardButtons/Button" + value.Key + "/AssignedKeyLabel");
-			node.Text = (string)value.Value;
+			char charValue = char.Parse(value.Value.ToString());
+			GD.Print(charValue.GetType());
+			GD.Print(charValue);
+			switch (Char.IsUpper(charValue) || specialchars.Contains(charValue))
+			{
+				case true:
+					node.Text = "[color=white]" + value.Value;
+					break;
+				case false:
+					node.Text = "[color=black]" + value.Value;
+					break;
+			}
 		}
 
 	}
 	public override void _Process(double delta)
 	{
+	}
+
+	private void on_button_press(string ButtonName)
+	{
+		Button button = GetNode<Button>("./KeyboardButtons/" + ButtonName);
+		RichTextLabel buttonLabel = GetNode<RichTextLabel>("./KeyboardButtons/" + ButtonName + "/AssignedKeyLabel");
+		switch (buttonLabel.Text.Contains("[color=black]"))
+		{
+			case true:
+				buttonLabel.Text = "[color=black] ...";
+				break;
+			case false:
+				buttonLabel.Text = "[color=white] ...";
+				break;
+		}
 	}
 }

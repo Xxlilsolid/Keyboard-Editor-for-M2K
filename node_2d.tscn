@@ -32,6 +32,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -49,6 +50,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -66,6 +68,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -83,6 +86,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -100,6 +104,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -117,6 +122,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -134,6 +140,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -151,6 +158,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -168,6 +176,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -185,6 +194,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -202,6 +212,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -219,6 +230,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -236,6 +248,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -253,6 +266,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -270,6 +284,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -287,6 +302,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -304,6 +320,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -321,6 +338,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -338,6 +356,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -355,6 +374,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -372,6 +392,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -389,6 +410,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -406,6 +428,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -423,6 +446,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -440,6 +464,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -457,6 +482,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -474,6 +500,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -491,6 +518,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -508,6 +536,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -525,6 +554,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -542,6 +572,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -559,6 +590,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -576,6 +608,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -593,6 +626,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -610,6 +644,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -627,6 +662,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=black]..."
@@ -644,6 +680,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -661,6 +698,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -678,6 +716,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -695,6 +734,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -712,6 +752,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -729,6 +770,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -746,6 +788,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -763,6 +806,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -780,6 +824,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -797,6 +842,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -814,6 +860,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -831,6 +878,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -848,6 +896,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -865,6 +914,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -882,6 +932,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -899,6 +950,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -916,6 +968,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -933,6 +986,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -950,6 +1004,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -967,6 +1022,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -984,6 +1040,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -1001,6 +1058,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -1018,6 +1076,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -1035,6 +1094,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
@@ -1052,6 +1112,7 @@ layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
 offset_bottom = 114.0
+mouse_filter = 1
 theme = ExtResource("3_epypp")
 bbcode_enabled = true
 text = "[color=white]..."
