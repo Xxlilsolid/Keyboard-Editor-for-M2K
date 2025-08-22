@@ -6,16 +6,16 @@ using System.Linq;
 using Microsoft.Win32;
 using System.Threading.Tasks;
 
-
 public partial class Main : Node2D
 {
 	bool buttonInputLock = false;
+	string keyPressed = null;
 	public override void _Ready()
 	{
 		for (int i = 36; i <= 96; i++)
 		{
 			Button button = GetNode<Button>("./KeyboardButtons/Button" + i);
-			button.Pressed += () => on_button_press((string)button.Name);
+			button.Pressed += async () => await on_button_press((string)button.Name);
 		}
 
 
@@ -96,6 +96,44 @@ public partial class Main : Node2D
 	{
 	}
 
+	public override void _Input(InputEvent @event)
+	{
+		Dictionary<char, char> specialchars = new Dictionary<char, char>
+		{
+			['1'] = '!', // Row one
+			['2'] = '"',
+			['3'] = '£',
+			['4'] = '$',
+			['5'] = '%',
+			['6'] = '^',
+			['7'] = '&',
+			['8'] = '*',
+			['9'] = '(',
+			['0'] = ')',
+			['-'] = '_',
+			['='] = '+',
+			['['] = '{', // Row two
+			[']'] = '}',
+			['\\'] = '|', // Row three
+			[';'] = ':', 
+			['@'] = '\'',
+			['#'] = '~',
+			[','] = '<',
+			['.'] = '>',
+			['/'] = '?'
+		};
+		if (@event is InputEventKey keyEvent && keyEvent.Pressed && buttonInputLock)
+		{
+			switch (keyEvent.ShiftPressed)
+			{
+				case true:
+					break;
+				case false:
+					break;
+			}
+		}
+    }
+
 	private async Task on_button_press(string ButtonName)
 	{
 		Button button = GetNode<Button>("./KeyboardButtons/" + ButtonName);
@@ -113,17 +151,17 @@ public partial class Main : Node2D
 				break;
 		}
 		buttonInputLock = false;
+		await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
 		buttonInputLock = true;
 		bool decisionMade = false;
 		while (buttonInputLock)
 		{
-			GD.Print("Locked");
 			await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
 		}
 		if (decisionMade != true)
 		{
 			Godot.Collections.Dictionary<string, string> keymapDict = (Godot.Collections.Dictionary<string, string>)GetNode<Node>("FileChecker").Call("ReadKeymap", "./keymap.json");
-			button.Text = String.Format("[color={0}]{1}", buttonColour, keymapDict[ButtonName.Substring(6, 2)]);
+			buttonLabel.Text = String.Format("[color={0}]{1}", buttonColour, keymapDict[ButtonName.Substring(6, 2)]);
 		}
 	}
 }
