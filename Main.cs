@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Microsoft.Win32;
+using System.Threading.Tasks;
 
 
 public partial class Main : Node2D
 {
+	bool buttonInputLock = false;
 	public override void _Ready()
 	{
 		for (int i = 36; i <= 96; i++)
@@ -94,18 +96,34 @@ public partial class Main : Node2D
 	{
 	}
 
-	private void on_button_press(string ButtonName)
+	private async Task on_button_press(string ButtonName)
 	{
 		Button button = GetNode<Button>("./KeyboardButtons/" + ButtonName);
 		RichTextLabel buttonLabel = GetNode<RichTextLabel>("./KeyboardButtons/" + ButtonName + "/AssignedKeyLabel");
+		string buttonColour;
 		switch (buttonLabel.Text.Contains("[color=black]"))
 		{
 			case true:
-				buttonLabel.Text = "[color=black] ...";
+				buttonColour = "black";
+				buttonLabel.Text = String.Format("[color={0}]...", buttonColour);
 				break;
 			case false:
-				buttonLabel.Text = "[color=white] ...";
+				buttonColour = "white";
+				buttonLabel.Text = String.Format("[color={0}]...", buttonColour);
 				break;
+		}
+		buttonInputLock = false;
+		buttonInputLock = true;
+		bool decisionMade = false;
+		while (buttonInputLock)
+		{
+			GD.Print("Locked");
+			await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
+		}
+		if (decisionMade != true)
+		{
+			Godot.Collections.Dictionary<string, string> keymapDict = (Godot.Collections.Dictionary<string, string>)GetNode<Node>("FileChecker").Call("ReadKeymap", "./keymap.json");
+			button.Text = String.Format("[color={0}]{1}", buttonColour, keymapDict[ButtonName.Substring(6, 2)]);
 		}
 	}
 }
