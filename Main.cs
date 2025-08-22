@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Microsoft.Win32;
 
 
 public partial class Main : Node2D
@@ -29,24 +30,44 @@ public partial class Main : Node2D
 				background.Color = new Color((float)0.322, (float)0.322, (float)0.322);
 				break;
 			case 2:
-				Process p = new Process();
-				p.StartInfo.UseShellExecute = false;
-				p.StartInfo.CreateNoWindow = true;
-				p.StartInfo.RedirectStandardOutput = true;
-				p.StartInfo.FileName = "gsettings";
-				p.StartInfo.Arguments = "get org.gnome.desktop.interface color-scheme";
-				p.Start();
-				string result = p.StandardOutput.ReadToEnd();
-				if (result.Contains("dark"))
+				if (System.OperatingSystem.IsLinux())
 				{
-					background.Color = new Color((float)0.322, (float)0.322, (float)0.322);
-					break;
+					Process p = new Process();
+					p.StartInfo.UseShellExecute = false;
+					p.StartInfo.CreateNoWindow = true;
+					p.StartInfo.RedirectStandardOutput = true;
+					p.StartInfo.FileName = "gsettings";
+					p.StartInfo.Arguments = "get org.gnome.desktop.interface color-scheme";
+					p.Start();
+					string result = p.StandardOutput.ReadToEnd();
+					if (result.Contains("dark"))
+					{
+						background.Color = new Color((float)0.322, (float)0.322, (float)0.322);
+						break;
+					}
+					else
+					{
+						background.Color = new Color((float)0.851, (float)0.851, (float)0.851);
+						break;
+					}
 				}
-				else
+				else if (System.OperatingSystem.IsWindows())
 				{
-					background.Color = new Color((float)0.851, (float)0.851, (float)0.851);
-					break;
+					string keyPath = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize";
+					int windowTheme = (int)Registry.CurrentUser.OpenSubKey(keyPath).GetValue("AppsUseLightTheme");
+
+					if (windowTheme == 0)
+					{
+						background.Color = new Color((float)0.322, (float)0.322, (float)0.322);
+						break;
+					}
+					else
+					{
+						background.Color = new Color((float)0.851, (float)0.851, (float)0.851);
+						break;
+					}
 				}
+				break;
 		}
 
 		Godot.Collections.Dictionary keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
