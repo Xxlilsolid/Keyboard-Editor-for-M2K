@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 public partial class Main : Node2D
 {
 	bool buttonInputLock = false;
-	string keyPressed = null;
+	char keyPressed;
+	bool decisionMade = false;
 	public override void _Ready()
 	{
 		for (int i = 36; i <= 96; i++)
@@ -98,41 +99,105 @@ public partial class Main : Node2D
 
 	public override void _Input(InputEvent @event)
 	{
-		Dictionary<char, char> specialchars = new Dictionary<char, char>
+		Dictionary<string, char> specialchars = new Dictionary<string, char>
 		{
-			['1'] = '!', // Row one
-			['2'] = '"',
-			['3'] = '£',
-			['4'] = '$',
-			['5'] = '%',
-			['6'] = '^',
-			['7'] = '&',
-			['8'] = '*',
-			['9'] = '(',
-			['0'] = ')',
-			['-'] = '_',
-			['='] = '+',
-			['['] = '{', // Row two
-			[']'] = '}',
-			['\\'] = '|', // Row three
-			[';'] = ':', 
-			['@'] = '\'',
-			['#'] = '~',
-			[','] = '<',
-			['.'] = '>',
-			['/'] = '?'
+			["Quoteleft"] = '¬', // Row One
+			["Key1"] = '!',
+			["Key2"] = '"',
+			["Key3"] = '£',
+			["Key4"] = '$',
+			["Key5"] = '%',
+			["Key6"] = '^',
+			["Key7"] = '&',
+			["Key8"] = '*',
+			["Key9"] = '(',
+			["Key0"] = ')',
+			["Minus"] = '_',
+			["Equal"] = '+',
+			["Bracketleft"] = '{', // Row Two
+			["Bracketright"] = '}',
+			["Semicolon"] = ':', // Row Three
+			["Apostrophe"] = '@',
+			["Numbersign"] = '~',
+			["Backslash"] = '|', // Row Four
+			["Comma"] = '<',
+			["Period"] = '>',
+			["Slash"] = '?'
 		};
+		Dictionary<string, char> characters = new Dictionary<string, char>
+		{
+			["Quoteleft"] = '`', // Row One
+			["Key1"] = '1',
+			["Key2"] = '2',
+			["Key3"] = '3',
+			["Key4"] = '4',
+			["Key5"] = '5',
+			["Key6"] = '6',
+			["Key7"] = '7',
+			["Key8"] = '8',
+			["Key9"] = '9',
+			["Key0"] = '0',
+			["Minus"] = '-',
+			["Equal"] = '=',
+			["Bracketleft"] = '[', // Row Two
+			["Bracketright"] = ']',
+			["Semicolon"] = ';', // Row Three
+			["Apostrophe"] = '@',
+			["Numbersign"] = '#',
+			["Backslash"] = '\\', // Row Four
+			["Comma"] = ',',
+			["Period"] = '.',
+			["Slash"] = '/'
+		};
+		string[] blacklistedkeys = ["Ctrl", "Alt", "Shift"];
 		if (@event is InputEventKey keyEvent && keyEvent.Pressed && buttonInputLock)
 		{
+			GD.Print(keyEvent.ShiftPressed);
 			switch (keyEvent.ShiftPressed)
 			{
 				case true:
-					break;
+					if (blacklistedkeys.Contains(keyEvent.Keycode.ToString()))
+					{
+						GD.Print(String.Format("Blacklisted key detected: {0}", keyEvent.Keycode.ToString()));
+						break;
+					}
+					if (specialchars.ContainsKey(keyEvent.Keycode.ToString()))
+					{
+						GD.Print(specialchars[keyEvent.Keycode.ToString()]);
+						SendVarSignal(specialchars[keyEvent.Keycode.ToString()]);
+						break;
+					}
+					else
+					{
+						GD.Print(keyEvent.Keycode.ToString().ToLower());
+						SendVarSignal((char)keyEvent.Keycode);
+						break;
+					}
 				case false:
-					break;
+					if (characters.ContainsKey(keyEvent.Keycode.ToString()))
+					{
+						GD.Print(characters[keyEvent.Keycode.ToString()]);
+						SendVarSignal(specialchars[keyEvent.Keycode.ToString()]);
+						break;
+					}
+					else
+					{
+						GD.Print(keyEvent.Keycode.ToString().ToLower());
+						SendVarSignal((char)keyEvent.Keycode);
+						break;
+					}
 			}
 		}
     }
+
+	private void SendVarSignal(char key)
+	{
+		key = char.ToLower(key);
+		keyPressed = key;
+		decisionMade = true;
+		buttonInputLock = false;
+		
+	}
 
 	private async Task on_button_press(string ButtonName)
 	{
@@ -153,7 +218,6 @@ public partial class Main : Node2D
 		buttonInputLock = false;
 		await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
 		buttonInputLock = true;
-		bool decisionMade = false;
 		while (buttonInputLock)
 		{
 			await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
@@ -162,6 +226,10 @@ public partial class Main : Node2D
 		{
 			Godot.Collections.Dictionary<string, string> keymapDict = (Godot.Collections.Dictionary<string, string>)GetNode<Node>("FileChecker").Call("ReadKeymap", "./keymap.json");
 			buttonLabel.Text = String.Format("[color={0}]{1}", buttonColour, keymapDict[ButtonName.Substring(6, 2)]);
+		}
+		else
+		{
+			buttonLabel.Text = String.Format("[color={0}]{1}", buttonColour, keyPressed);
 		}
 	}
 }
