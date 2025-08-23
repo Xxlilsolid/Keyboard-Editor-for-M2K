@@ -152,15 +152,14 @@ public partial class Main : Node2D
 		string[] blacklistedkeys = ["Ctrl", "Alt", "Shift"];
 		if (@event is InputEventKey keyEvent && keyEvent.Pressed && buttonInputLock)
 		{
-			GD.Print(keyEvent.ShiftPressed);
+			if (blacklistedkeys.Contains(keyEvent.Keycode.ToString()))
+			{
+				GD.Print(String.Format("Blacklisted key detected: {0}", keyEvent.Keycode.ToString()));
+				return;
+			}
 			switch (keyEvent.ShiftPressed)
 			{
 				case true:
-					if (blacklistedkeys.Contains(keyEvent.Keycode.ToString()))
-					{
-						GD.Print(String.Format("Blacklisted key detected: {0}", keyEvent.Keycode.ToString()));
-						break;
-					}
 					if (specialchars.ContainsKey(keyEvent.Keycode.ToString()))
 					{
 						GD.Print(specialchars[keyEvent.Keycode.ToString()]);
@@ -177,7 +176,7 @@ public partial class Main : Node2D
 					if (characters.ContainsKey(keyEvent.Keycode.ToString()))
 					{
 						GD.Print(characters[keyEvent.Keycode.ToString()]);
-						SendVarSignal(specialchars[keyEvent.Keycode.ToString()]);
+						SendVarSignal(characters[keyEvent.Keycode.ToString()]);
 						break;
 					}
 					else
