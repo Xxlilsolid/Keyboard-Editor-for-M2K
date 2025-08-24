@@ -1,7 +1,10 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dps5aawnwsgu3"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dps5aawnwsgu3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtl04"]
-bg_color = Color(0.864675, 0.864675, 0.864675, 1)
+[ext_resource type="StyleBox" uid="uid://hkluarrf4shj" path="res://assets/menu button hover.tres" id="1_nusdk"]
+[ext_resource type="StyleBox" uid="uid://beq4lr73mrlkl" path="res://assets/menu button normal.tres" id="2_np72g"]
 
 [resource]
-Button/styles/normal = SubResource("StyleBoxFlat_xtl04")
+Button/styles/focus = ExtResource("2_np72g")
+Button/styles/hover = ExtResource("1_nusdk")
+Button/styles/normal = ExtResource("2_np72g")
+Button/styles/pressed = ExtResource("1_nusdk")

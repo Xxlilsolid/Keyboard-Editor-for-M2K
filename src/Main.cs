@@ -20,7 +20,8 @@ public partial class Main : Node2D
 			Button button = GetNode<Button>("./Buttons/KeyboardButtons/Button" + i);
 			button.Pressed += async () => await on_button_press((string)button.Name);
 		}
-
+		Button closeButton = GetNode<Button>("Buttons/MenuButtons/Close");
+		closeButton.Pressed += () => CloseWindow();
 
 		var fileChecker = GetNode<Node>("FileChecker");
 		var background = GetNode<ColorRect>("Background");
@@ -195,6 +196,10 @@ public partial class Main : Node2D
 		keyPressed = key;
 		decisionMade = true;
 		buttonInputLock = false;
+	}
+
+	private void CloseWindow(){
+		GetTree().Quit();
 	}
 
 	private async Task on_button_press(string ButtonName)
