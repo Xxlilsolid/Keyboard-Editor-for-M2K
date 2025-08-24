@@ -1,6 +1,7 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://baq4ng5mo1yy3"]
 
-[ext_resource type="StyleBox" uid="uid://duybqts0aba46" path="res://black key.tres" id="1_b64pt"]
+[ext_resource type="StyleBox" uid="uid://duybqts0aba46" path="res://assets/black key.tres" id="1_b64pt"]
+
 
 [resource]
 Button/styles/disabled = ExtResource("1_b64pt")

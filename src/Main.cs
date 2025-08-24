@@ -11,6 +11,8 @@ public partial class Main : Node2D
 	bool buttonInputLock = false;
 	char keyPressed;
 	bool decisionMade = false;
+
+	Godot.Collections.Dictionary keymap;
 	public override void _Ready()
 	{
 		for (int i = 36; i <= 96; i++)
@@ -73,14 +75,12 @@ public partial class Main : Node2D
 				break;
 		}
 
-		Godot.Collections.Dictionary keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
+		keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
 		Char[] specialchars = ['!', '@', '$', '%', '^', '*', '('];
 		foreach (var value in keymap)
 		{
 			var node = GetNode<RichTextLabel>("KeyboardButtons/Button" + value.Key + "/AssignedKeyLabel");
 			char charValue = char.Parse(value.Value.ToString());
-			GD.Print(charValue.GetType());
-			GD.Print(charValue);
 			switch (Char.IsUpper(charValue) || specialchars.Contains(charValue))
 			{
 				case true:
@@ -195,7 +195,6 @@ public partial class Main : Node2D
 		keyPressed = key;
 		decisionMade = true;
 		buttonInputLock = false;
-		
 	}
 
 	private async Task on_button_press(string ButtonName)
@@ -229,6 +228,7 @@ public partial class Main : Node2D
 		else
 		{
 			buttonLabel.Text = String.Format("[color={0}]{1}", buttonColour, keyPressed);
+			keymap[ButtonName.Substring(6, 2)] = keyPressed.ToString();
 		}
 	}
 }

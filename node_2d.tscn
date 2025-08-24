@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn3fhufjuep82"]
+[gd_scene load_steps=6 format=3 uid="uid://bn3fhufjuep82"]
 
-[ext_resource type="Script" uid="uid://dlxto1s7ort8d" path="res://Main.cs" id="1_wtcfe"]
-[ext_resource type="Script" uid="uid://dnfqrjrolrr8i" path="res://FileChecker.cs" id="2_0e48y"]
-[ext_resource type="Theme" uid="uid://cgfjr15dolyl8" path="res://white key theme.tres" id="3_epypp"]
-[ext_resource type="Theme" uid="uid://baq4ng5mo1yy3" path="res://black key theme.tres" id="4_0hol4"]
+[ext_resource type="Script" uid="uid://dlxto1s7ort8d" path="res://src/Main.cs" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://dnfqrjrolrr8i" path="res://src/FileChecker.cs" id="2_0e48y"]
+[ext_resource type="Theme" uid="uid://cgfjr15dolyl8" path="res://assets/white key theme.tres" id="3_epypp"]
+[ext_resource type="Theme" uid="uid://baq4ng5mo1yy3" path="res://assets/black key theme.tres" id="4_0hol4"]
+[ext_resource type="Theme" uid="uid://dps5aawnwsgu3" path="res://assets/menu button.tres" id="5_q6r6c"]
 
 [node name="Root" type="Node2D"]
 script = ExtResource("1_wtcfe")
@@ -1121,3 +1122,12 @@ horizontal_alignment = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(611, 189)
 zoom = Vector2(0.93, 1.715)
+
+[node name="MenuButtons" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="MenuButtons"]
+offset_top = 212.0
+offset_right = 8.0
+offset_bottom = 220.0
+scale = Vector2(13, 11.36)
+theme = ExtResource("5_q6r6c")
