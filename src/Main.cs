@@ -17,7 +17,7 @@ public partial class Main : Node2D
 	{
 		for (int i = 36; i <= 96; i++)
 		{
-			Button button = GetNode<Button>("./KeyboardButtons/Button" + i);
+			Button button = GetNode<Button>("./Buttons/KeyboardButtons/Button" + i);
 			button.Pressed += async () => await on_button_press((string)button.Name);
 		}
 
@@ -79,7 +79,7 @@ public partial class Main : Node2D
 		Char[] specialchars = ['!', '@', '$', '%', '^', '*', '('];
 		foreach (var value in keymap)
 		{
-			var node = GetNode<RichTextLabel>("KeyboardButtons/Button" + value.Key + "/AssignedKeyLabel");
+			var node = GetNode<RichTextLabel>("Buttons/KeyboardButtons/Button" + value.Key + "/AssignedKeyLabel");
 			char charValue = char.Parse(value.Value.ToString());
 			switch (Char.IsUpper(charValue) || specialchars.Contains(charValue))
 			{
@@ -199,8 +199,8 @@ public partial class Main : Node2D
 
 	private async Task on_button_press(string ButtonName)
 	{
-		Button button = GetNode<Button>("./KeyboardButtons/" + ButtonName);
-		RichTextLabel buttonLabel = GetNode<RichTextLabel>("./KeyboardButtons/" + ButtonName + "/AssignedKeyLabel");
+		Button button = GetNode<Button>("./Buttons/KeyboardButtons/" + ButtonName);
+		RichTextLabel buttonLabel = GetNode<RichTextLabel>("./Buttons/KeyboardButtons/" + ButtonName + "/AssignedKeyLabel");
 		string buttonColour;
 		switch (buttonLabel.Text.Contains("[color=black]"))
 		{

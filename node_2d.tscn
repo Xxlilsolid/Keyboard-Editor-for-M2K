@@ -19,16 +19,22 @@ offset_right = 1083.0
 offset_bottom = 624.0
 scale = Vector2(22.2, 22.2)
 
-[node name="KeyboardButtons" type="CanvasLayer" parent="."]
+[node name="Buttons" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
-[node name="Button36" type="Button" parent="KeyboardButtons"]
+[node name="KeyboardButtons" type="Control" parent="Buttons"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button36" type="Button" parent="Buttons/KeyboardButtons"]
 offset_right = 34.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button36"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button36"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -39,14 +45,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button38" type="Button" parent="KeyboardButtons"]
+[node name="Button38" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 34.0
 offset_right = 68.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button38"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button38"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -57,14 +63,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button40" type="Button" parent="KeyboardButtons"]
+[node name="Button40" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 68.0
 offset_right = 102.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button40"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button40"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -75,14 +81,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button41" type="Button" parent="KeyboardButtons"]
+[node name="Button41" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 102.0
 offset_right = 136.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button41"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button41"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -93,14 +99,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button43" type="Button" parent="KeyboardButtons"]
+[node name="Button43" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 136.0
 offset_right = 170.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button43"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button43"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -111,14 +117,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button45" type="Button" parent="KeyboardButtons"]
+[node name="Button45" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 170.0
 offset_right = 204.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button45"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button45"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -129,14 +135,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button47" type="Button" parent="KeyboardButtons"]
+[node name="Button47" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 204.0
 offset_right = 238.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button47"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button47"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -147,14 +153,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button48" type="Button" parent="KeyboardButtons"]
+[node name="Button48" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 238.0
 offset_right = 272.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button48"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button48"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -165,14 +171,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button50" type="Button" parent="KeyboardButtons"]
+[node name="Button50" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 272.0
 offset_right = 306.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button50"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button50"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -183,14 +189,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button52" type="Button" parent="KeyboardButtons"]
+[node name="Button52" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 306.0
 offset_right = 340.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button52"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button52"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -201,14 +207,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button53" type="Button" parent="KeyboardButtons"]
+[node name="Button53" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 340.0
 offset_right = 374.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button53"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button53"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -219,14 +225,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button55" type="Button" parent="KeyboardButtons"]
+[node name="Button55" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 374.0
 offset_right = 408.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button55"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button55"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -237,14 +243,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button57" type="Button" parent="KeyboardButtons"]
+[node name="Button57" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 408.0
 offset_right = 442.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button57"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button57"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -255,14 +261,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button59" type="Button" parent="KeyboardButtons"]
+[node name="Button59" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 442.0
 offset_right = 476.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button59"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button59"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -273,14 +279,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button60" type="Button" parent="KeyboardButtons"]
+[node name="Button60" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 476.0
 offset_right = 510.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button60"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button60"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -291,14 +297,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button62" type="Button" parent="KeyboardButtons"]
+[node name="Button62" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 510.0
 offset_right = 544.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button62"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button62"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -309,14 +315,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button64" type="Button" parent="KeyboardButtons"]
+[node name="Button64" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 544.0
 offset_right = 578.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button64"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button64"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -327,14 +333,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button65" type="Button" parent="KeyboardButtons"]
+[node name="Button65" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 578.0
 offset_right = 612.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button65"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button65"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -345,14 +351,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button67" type="Button" parent="KeyboardButtons"]
+[node name="Button67" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 612.0
 offset_right = 646.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button67"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button67"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -363,14 +369,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button69" type="Button" parent="KeyboardButtons"]
+[node name="Button69" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 646.0
 offset_right = 680.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button69"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button69"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -381,14 +387,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button71" type="Button" parent="KeyboardButtons"]
+[node name="Button71" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 680.0
 offset_right = 714.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button71"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button71"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -399,14 +405,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button72" type="Button" parent="KeyboardButtons"]
+[node name="Button72" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 714.0
 offset_right = 748.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button72"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button72"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -417,14 +423,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button74" type="Button" parent="KeyboardButtons"]
+[node name="Button74" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 748.0
 offset_right = 782.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button74"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button74"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -435,14 +441,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button76" type="Button" parent="KeyboardButtons"]
+[node name="Button76" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 782.0
 offset_right = 816.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button76"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button76"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -453,14 +459,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button77" type="Button" parent="KeyboardButtons"]
+[node name="Button77" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 816.0
 offset_right = 850.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button77"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button77"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -471,14 +477,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button79" type="Button" parent="KeyboardButtons"]
+[node name="Button79" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 850.0
 offset_right = 884.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button79"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button79"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -489,14 +495,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button81" type="Button" parent="KeyboardButtons"]
+[node name="Button81" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 884.0
 offset_right = 918.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button81"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button81"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -507,14 +513,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button83" type="Button" parent="KeyboardButtons"]
+[node name="Button83" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 918.0
 offset_right = 952.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button83"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button83"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -525,14 +531,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button84" type="Button" parent="KeyboardButtons"]
+[node name="Button84" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 952.0
 offset_right = 986.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button84"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button84"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -543,14 +549,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button86" type="Button" parent="KeyboardButtons"]
+[node name="Button86" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 986.0
 offset_right = 1020.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button86"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button86"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -561,14 +567,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button88" type="Button" parent="KeyboardButtons"]
+[node name="Button88" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1020.0
 offset_right = 1054.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button88"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button88"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -579,14 +585,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button89" type="Button" parent="KeyboardButtons"]
+[node name="Button89" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1054.0
 offset_right = 1088.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button89"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button89"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -597,14 +603,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button91" type="Button" parent="KeyboardButtons"]
+[node name="Button91" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1088.0
 offset_right = 1122.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button91"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button91"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -615,14 +621,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button93" type="Button" parent="KeyboardButtons"]
+[node name="Button93" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1122.0
 offset_right = 1156.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button93"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button93"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -633,14 +639,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button95" type="Button" parent="KeyboardButtons"]
+[node name="Button95" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1156.0
 offset_right = 1190.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button95"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button95"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -651,14 +657,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button96" type="Button" parent="KeyboardButtons"]
+[node name="Button96" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1190.0
 offset_right = 1224.0
 offset_bottom = 114.0
 scale = Vector2(1, 1.73144)
 theme = ExtResource("3_epypp")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button96"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button96"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -669,14 +675,14 @@ bbcode_enabled = true
 text = "[color=black]..."
 horizontal_alignment = 1
 
-[node name="Button37" type="Button" parent="KeyboardButtons"]
+[node name="Button37" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 25.0
 offset_right = 59.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button37"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button37"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -687,14 +693,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button39" type="Button" parent="KeyboardButtons"]
+[node name="Button39" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 59.0
 offset_right = 93.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button39"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button39"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -705,14 +711,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button42" type="Button" parent="KeyboardButtons"]
+[node name="Button42" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 122.0
 offset_right = 156.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button42"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button42"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -723,14 +729,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button44" type="Button" parent="KeyboardButtons"]
+[node name="Button44" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 161.0
 offset_right = 195.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button44"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button44"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -741,14 +747,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button46" type="Button" parent="KeyboardButtons"]
+[node name="Button46" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 195.0
 offset_right = 229.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button46"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button46"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -759,14 +765,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button49" type="Button" parent="KeyboardButtons"]
+[node name="Button49" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 264.0
 offset_right = 298.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button49"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button49"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -777,14 +783,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button51" type="Button" parent="KeyboardButtons"]
+[node name="Button51" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 298.0
 offset_right = 332.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button51"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button51"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -795,14 +801,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button54" type="Button" parent="KeyboardButtons"]
+[node name="Button54" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 361.0
 offset_right = 395.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button54"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button54"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -813,14 +819,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button56" type="Button" parent="KeyboardButtons"]
+[node name="Button56" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 400.0
 offset_right = 434.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button56"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button56"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -831,14 +837,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button58" type="Button" parent="KeyboardButtons"]
+[node name="Button58" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 434.0
 offset_right = 468.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button58"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button58"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -849,14 +855,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button61" type="Button" parent="KeyboardButtons"]
+[node name="Button61" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 501.0
 offset_right = 535.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button61"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button61"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -867,14 +873,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button63" type="Button" parent="KeyboardButtons"]
+[node name="Button63" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 535.0
 offset_right = 569.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button63"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button63"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -885,14 +891,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button66" type="Button" parent="KeyboardButtons"]
+[node name="Button66" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 598.0
 offset_right = 632.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button66"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button66"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -903,14 +909,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button68" type="Button" parent="KeyboardButtons"]
+[node name="Button68" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 637.0
 offset_right = 671.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button68"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button68"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -921,14 +927,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button70" type="Button" parent="KeyboardButtons"]
+[node name="Button70" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 671.0
 offset_right = 705.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button70"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button70"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -939,14 +945,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button73" type="Button" parent="KeyboardButtons"]
+[node name="Button73" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 740.0
 offset_right = 774.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button73"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button73"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -957,14 +963,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button75" type="Button" parent="KeyboardButtons"]
+[node name="Button75" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 774.0
 offset_right = 808.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button75"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button75"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -975,14 +981,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button78" type="Button" parent="KeyboardButtons"]
+[node name="Button78" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 837.0
 offset_right = 871.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button78"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button78"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -993,14 +999,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button80" type="Button" parent="KeyboardButtons"]
+[node name="Button80" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 876.0
 offset_right = 910.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button80"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button80"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -1011,14 +1017,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button82" type="Button" parent="KeyboardButtons"]
+[node name="Button82" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 910.0
 offset_right = 944.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button82"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button82"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -1029,14 +1035,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button85" type="Button" parent="KeyboardButtons"]
+[node name="Button85" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 977.0
 offset_right = 1011.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button85"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button85"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -1047,14 +1053,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button87" type="Button" parent="KeyboardButtons"]
+[node name="Button87" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1011.0
 offset_right = 1045.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button87"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button87"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -1065,14 +1071,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button90" type="Button" parent="KeyboardButtons"]
+[node name="Button90" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1074.0
 offset_right = 1108.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button90"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button90"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -1083,14 +1089,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button92" type="Button" parent="KeyboardButtons"]
+[node name="Button92" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1113.0
 offset_right = 1147.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button92"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button92"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -1101,14 +1107,14 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
-[node name="Button94" type="Button" parent="KeyboardButtons"]
+[node name="Button94" type="Button" parent="Buttons/KeyboardButtons"]
 offset_left = 1147.0
 offset_right = 1181.0
 offset_bottom = 114.0
 scale = Vector2(0.64, 1.10812)
 theme = ExtResource("4_0hol4")
 
-[node name="AssignedKeyLabel" type="RichTextLabel" parent="KeyboardButtons/Button94"]
+[node name="AssignedKeyLabel" type="RichTextLabel" parent="Buttons/KeyboardButtons/Button94"]
 layout_mode = 0
 offset_top = 74.0
 offset_right = 34.0
@@ -1119,15 +1125,28 @@ bbcode_enabled = true
 text = "[color=white]..."
 horizontal_alignment = 1
 
+[node name="MenuButtons" type="Control" parent="Buttons"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Close" type="Button" parent="Buttons/MenuButtons"]
+offset_left = 576.0
+offset_top = 288.0
+offset_right = 584.0
+offset_bottom = 296.0
+scale = Vector2(21.88, 11.36)
+theme = ExtResource("5_q6r6c")
+
+[node name="Apply" type="Button" parent="Buttons/MenuButtons"]
+offset_left = 401.0
+offset_top = 288.0
+offset_right = 409.0
+offset_bottom = 296.0
+scale = Vector2(21.88, 11.36)
+theme = ExtResource("5_q6r6c")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(611, 189)
 zoom = Vector2(0.93, 1.715)
-
-[node name="MenuButtons" type="CanvasLayer" parent="."]
-
-[node name="Button" type="Button" parent="MenuButtons"]
-offset_top = 212.0
-offset_right = 8.0
-offset_bottom = 220.0
-scale = Vector2(13, 11.36)
-theme = ExtResource("5_q6r6c")
