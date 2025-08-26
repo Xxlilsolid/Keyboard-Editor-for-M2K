@@ -34,4 +34,19 @@ public partial class FileChecker : Node
 		}
 		return dictionary;
 	}
+
+	public void OverwriteKeymap(Godot.Collections.Dictionary incomingdictionary)
+	{
+		JsonObject jsonFile = new JsonObject
+		{ 
+			["keymap"] = new JsonObject{}
+		};
+
+		JsonObject innerdict = (JsonObject)jsonFile["keymap"];
+		foreach (KeyValuePair<Variant, Variant> value in incomingdictionary)
+		{
+			innerdict.Add((string)value.Key, (string)value.Value);
+		}
+		File.WriteAllText("keymap.json", JsonSerializer.Serialize(jsonFile));
+	}
 }

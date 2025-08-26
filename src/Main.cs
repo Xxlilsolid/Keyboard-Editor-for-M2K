@@ -22,8 +22,10 @@ public partial class Main : Node2D
 		}
 		Button closeButton = GetNode<Button>("Buttons/MenuButtons/Close");
 		Button resetButton = GetNode<Button>("Buttons/MenuButtons/Reset");
+		Button applyButton = GetNode<Button>("Buttons/MenuButtons/Apply");
 		closeButton.Pressed += () => CloseWindow();
 		resetButton.Pressed += () => ResetKeymap();
+		applyButton.Pressed += () => GetNode<Node>("FileChecker").Call("OverwriteKeymap", keymap);
 
 		var fileChecker = GetNode<Node>("FileChecker");
 		var background = GetNode<ColorRect>("Background");
@@ -204,7 +206,13 @@ public partial class Main : Node2D
 		GetTree().Quit();
 	}
 
-	private void ResetKeymap() {
+	private void ApplyKeymap()
+	{
+		
+	}
+
+	private void ResetKeymap()
+	{
 		Node fileChecker = GetNode<Node>("FileChecker");
 		keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
 		Char[] specialchars = ['!', '@', '$', '%', '^', '*', '('];
