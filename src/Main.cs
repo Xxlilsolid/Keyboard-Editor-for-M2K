@@ -21,7 +21,9 @@ public partial class Main : Node2D
 			button.Pressed += async () => await on_button_press((string)button.Name);
 		}
 		Button closeButton = GetNode<Button>("Buttons/MenuButtons/Close");
+		Button resetButton = GetNode<Button>("Buttons/MenuButtons/Reset");
 		closeButton.Pressed += () => CloseWindow();
+		resetButton.Pressed += () => ResetKeymap();
 
 		var fileChecker = GetNode<Node>("FileChecker");
 		var background = GetNode<ColorRect>("Background");
@@ -200,6 +202,26 @@ public partial class Main : Node2D
 
 	private void CloseWindow(){
 		GetTree().Quit();
+	}
+
+	private void ResetKeymap() {
+		Node fileChecker = GetNode<Node>("FileChecker");
+		keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
+		Char[] specialchars = ['!', '@', '$', '%', '^', '*', '('];
+		foreach (var value in keymap)
+		{
+			var node = GetNode<RichTextLabel>("Buttons/KeyboardButtons/Button" + value.Key + "/AssignedKeyLabel");
+			char charValue = char.Parse(value.Value.ToString());
+			switch (Char.IsUpper(charValue) || specialchars.Contains(charValue))
+			{
+				case true:
+					node.Text = "[color=white]" + value.Value;
+					break;
+				case false:
+					node.Text = "[color=black]" + value.Value;
+					break;
+			}
+		}
 	}
 
 	private async Task on_button_press(string ButtonName)
