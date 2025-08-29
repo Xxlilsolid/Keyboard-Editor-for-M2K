@@ -10,3 +10,8 @@
 ## How to build
 
 idrk lol
+
+## What will probably be next?
+
+- [ ] Neaten up code in Main.cs and FileChecker.cs
+- [ ] Make FileChecker.cs more flexible
