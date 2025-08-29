@@ -10,6 +10,10 @@ using System.Text.Json.Nodes;
 
 public partial class FileChecker : Node
 {
+	JsonSerializerOptions options = new JsonSerializerOptions
+	{
+		WriteIndented = true
+	};
 	public Godot.Collections.Dictionary<string, string> ReadSettings(string settingslocation)
 	{
 		string jsonString = File.ReadAllText(settingslocation);
@@ -47,6 +51,6 @@ public partial class FileChecker : Node
 		{
 			innerdict.Add((string)value.Key, (string)value.Value);
 		}
-		File.WriteAllText("keymap.json", JsonSerializer.Serialize(jsonFile));
+		File.WriteAllText("keymap.json", JsonSerializer.Serialize(jsonFile, options));
 	}
 }
