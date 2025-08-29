@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://dps5aawnwsgu3"]
 
-[ext_resource type="StyleBox" uid="uid://hkluarrf4shj" path="res://assets/menu button hover.tres" id="1_nusdk"]
-[ext_resource type="StyleBox" uid="uid://beq4lr73mrlkl" path="res://assets/menu button normal.tres" id="2_np72g"]
+[ext_resource type="StyleBox" uid="uid://hkluarrf4shj" path="res://assets/godot_themes/menu button hover.tres" id="1_nusdk"]
+[ext_resource type="StyleBox" uid="uid://beq4lr73mrlkl" path="res://assets/godot_themes/menu button normal.tres" id="2_np72g"]
 
 [resource]
 Button/styles/focus = ExtResource("2_np72g")

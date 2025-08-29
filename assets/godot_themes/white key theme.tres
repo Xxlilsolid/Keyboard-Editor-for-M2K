@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://cgfjr15dolyl8"]
 
-[ext_resource type="StyleBox" uid="uid://dj2r48cr3wuuo" path="res://assets/white key.tres" id="1_ge7k1"]
+[ext_resource type="StyleBox" uid="uid://dj2r48cr3wuuo" path="res://assets/godot_themes/white key.tres" id="1_ge7k1"]
 
 
 [resource]
