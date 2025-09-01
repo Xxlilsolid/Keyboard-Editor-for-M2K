@@ -23,9 +23,11 @@ public partial class Main : Node2D
 		Button closeButton = GetNode<Button>("Buttons/MenuButtons/Close");
 		Button resetButton = GetNode<Button>("Buttons/MenuButtons/Reset");
 		Button applyButton = GetNode<Button>("Buttons/MenuButtons/Apply");
-		closeButton.Pressed += () => CloseWindow();
+		TextureButton resetDefaultButton = GetNode<TextureButton>("Buttons/MenuButtons/ResetDefaults");
+		closeButton.Pressed += () => GetTree().Quit();
 		resetButton.Pressed += () => ResetKeymap();
 		applyButton.Pressed += () => GetNode<Node>("FileChecker").Call("OverwriteKeymap", keymap);
+		resetDefaultButton.Pressed += () => ResetDefaultKeymap();
 
 		var fileChecker = GetNode<Node>("FileChecker");
 		var background = GetNode<ColorRect>("Background");
@@ -201,16 +203,91 @@ public partial class Main : Node2D
 		decisionMade = true;
 		buttonInputLock = false;
 	}
-
-	private void CloseWindow(){
-		GetTree().Quit();
-	}
-
-	private void ApplyKeymap()
+	private void ResetDefaultKeymap()
 	{
-		
-	}
+		Godot.Collections.Dictionary<Variant, Variant> defaultKeymap = new Godot.Collections.Dictionary<Variant, Variant>
+		{
+			[36] = "1",
+			[37] = "!",
+			[38] = "2",
+			[39] = "@",
+			[40] = "3",
+			[41] = "4",
+			[42] = "$",
+			[43] = "5",
+			[44] = "%",
+			[45] = "6",
+			[46] = "^",
+			[47] = "7",
+			[48] = "8",
+			[49] = "*",
+			[50] = "9",
+			[51] = "(",
+			[52] = "0",
+			[53] = "q",
+			[54] = "Q",
+			[55] = "w",
+			[56] = "W",
+			[57] = "e",
+			[58] = "E",
+			[59] = "r",
+			[60] = "t",
+			[61] = "T",
+			[62] = "y",
+			[63] = "Y",
+			[64] = "u",
+			[65] = "i",
+			[66] = "I",
+			[67] = "o",
+			[68] = "O",
+			[69] = "p",
+			[70] = "P",
+			[71] = "a",
+			[72] = "s",
+			[73] = "S",
+			[74] = "d",
+			[75] = "D",
+			[76] = "f",
+			[77] = "g",
+			[78] = "G",
+			[79] = "h",
+			[80] = "H",
+			[81] = "j",
+			[82] = "J",
+			[83] = "k",
+			[84] = "l",
+			[85] = "L",
+			[86] = "z",
+			[87] = "Z",
+			[88] = "x",
+			[89] = "c",
+			[90] = "C",
+			[91] = "v",
+			[92] = "V",
+			[93] = "b",
+			[94] = "B",
+			[95] = "n",
+			[96] = "m"
+		};
 
+		Char[] specialchars = ['!', '@', '$', '%', '^', '*', '('];
+		foreach (var value in defaultKeymap)
+		{
+			var node = GetNode<RichTextLabel>("Buttons/KeyboardButtons/Button" + value.Key + "/AssignedKeyLabel");
+			char charValue = char.Parse(value.Value.ToString());
+			switch (Char.IsUpper(charValue) || specialchars.Contains(charValue))
+			{
+				case true:
+					node.Text = "[color=white]" + value.Value;
+					break;
+				case false:
+					node.Text = "[color=black]" + value.Value;
+					break;
+			}
+		}
+		GD.Print(defaultKeymap);
+		GetNode<Node>("FileChecker").Call("OverwriteKeymap", defaultKeymap);
+	}
 	private void ResetKeymap()
 	{
 		Node fileChecker = GetNode<Node>("FileChecker");
