@@ -31,7 +31,7 @@ public partial class Main : Node2D
 
 		var fileChecker = GetNode<Node>("FileChecker");
 		var background = GetNode<ColorRect>("Background");
-		Godot.Collections.Dictionary settings = (Godot.Collections.Dictionary)fileChecker.Call("ReadSettings", "./settings.json");
+		Godot.Collections.Dictionary settings = (Godot.Collections.Dictionary)fileChecker.Call("ReadSettings", "../../settings.json");
 		int theme = (int)settings["theme"];
 		switch (theme) //0 is light mode, 1 is dark mode, 2 is system default
 		{
@@ -82,7 +82,7 @@ public partial class Main : Node2D
 				break;
 		}
 
-		keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
+		keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "../../keymap.json");
 		Char[] specialchars = ['!', '@', '$', '%', '^', '*', '('];
 		foreach (var value in keymap)
 		{
@@ -291,7 +291,7 @@ public partial class Main : Node2D
 	private void ResetKeymap()
 	{
 		Node fileChecker = GetNode<Node>("FileChecker");
-		keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "./keymap.json");
+		keymap = (Godot.Collections.Dictionary)fileChecker.Call("ReadKeymap", "../../keymap.json");
 		Char[] specialchars = ['!', '@', '$', '%', '^', '*', '('];
 		foreach (var value in keymap)
 		{
@@ -334,7 +334,7 @@ public partial class Main : Node2D
 		}
 		if (decisionMade != true)
 		{
-			Godot.Collections.Dictionary<string, string> keymapDict = (Godot.Collections.Dictionary<string, string>)GetNode<Node>("FileChecker").Call("ReadKeymap", "./keymap.json");
+			Godot.Collections.Dictionary<string, string> keymapDict = (Godot.Collections.Dictionary<string, string>)GetNode<Node>("FileChecker").Call("ReadKeymap", "../../keymap.json");
 			buttonLabel.Text = String.Format("[color={0}]{1}", buttonColour, keymapDict[ButtonName.Substring(6, 2)]);
 		}
 		else
