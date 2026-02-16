@@ -52,6 +52,6 @@ public partial class FileChecker : Node
 			innerdict.Add((string)value.Key, (string)value.Value);
 		}
 		GD.Print(jsonFile);
-		File.WriteAllText("../../keymap.json", JsonSerializer.Serialize(jsonFile, options));
+		File.WriteAllText("keymap.json", JsonSerializer.Serialize(jsonFile, options));
 	}
 }
